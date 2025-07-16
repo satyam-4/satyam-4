@@ -86,8 +86,7 @@
 
 ###
 
-<div align="center">
-  <img src="https://streak-stats.demolab.com?user=satyam-4&locale=en&mode=daily&theme=dark&hide_border=false&border_radius=5&order=3" height="220" alt="streak graph"  />
-</div>
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=satyam-4&theme=darcula)](https://git.io/streak-stats)
+
 
 ###
