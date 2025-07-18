@@ -88,11 +88,6 @@
 <div align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=Satyam-4&theme=dark&hide_border=true" alt="Satyam-4's Streak" />
 </div>
-<div align="center">
-</div>
-<div align="center">
-  <img src="https://leetcard.jacoblin.cool/_Satyam_Mishra?ext=activity" alt="Leetcode Card" />
-</div>
 
 ###
 
