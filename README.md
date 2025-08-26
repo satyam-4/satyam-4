@@ -49,7 +49,7 @@
 
 ###
 
-  [![My Skills](https://skillicons.dev/icons?i=nodejs,express,js,ts,react,postman,prisma,redux,redis,pnpm,mongodb,postgres,html,css,docker,cpp)](https://skillicons.dev)
+  [![My Skills](https://skillicons.dev/icons?i=nodejs,express,js,ts,nextjs,react,postman,prisma,redux,redis,pnpm,mongodb,postgres,html,css,docker,cpp)](https://skillicons.dev)
   
 ###
 
