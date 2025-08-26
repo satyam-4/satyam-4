@@ -35,7 +35,7 @@
 <h3 align="left">👩‍💻  About Me</h3>
 
 <ul align="left">
-  <li>🔭 I’m currently working on a YouTube clone and a productivity web app</li>
+  <li>🔭 I’m currently working on E-commerce Backend for learning purposes</li>
   <li>🌱 I’m currently learning <strong>Fundamentals</strong> and <strong>Backend development</strong></li>
   <li>👯 I’m open to opportunities and eager to learn through <strong>collaboration</strong></li>
   <li>💬 Ask me about <strong>Node.js, React, MongoDB, Express</strong></li>
