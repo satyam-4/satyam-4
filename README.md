@@ -40,25 +40,3 @@
 </ul>
 
 
-###
-
-<h3 align="left">🛠 Language and tools</h3>
-
-###
-
-  [![My Skills](https://skillicons.dev/icons?i=nodejs,express,js,ts,nextjs,react,postman,prisma,redux,redis,pnpm,mongodb,postgres,html,css,docker,cpp)](https://skillicons.dev)
-  
-###
-
-<h3 align="left">🔥   My Stats :</h3>
-
-###
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Satyam-4&theme=dark&show_icons=true&hide_border=true&count_private=true" alt="Satyam-4's Stats" />
-</div>
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Satyam-4&theme=dark&show_icons=true&hide_border=true&layout=compact" alt="Satyam-4's Top Languages" />
-</div>
-
-
