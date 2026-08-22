@@ -17,12 +17,12 @@
 
 ###
 
-<h3 align="left">👩‍💻  About Me</h3>
+<h3 align="left">🧑  About Me</h3>
 
 <ul align="left">
-  <li>🔭 I’m currently building cool projects that tackles real world problems</li>
-  <li>🌱 I’m currently learning <strong>Core CS Fundamentals</strong> and <strong>Backend Engineering</strong></li>
-  <li>👯 I’m open to opportunities and eager to learn through <strong>collaboration</strong></li>
+  <li>⚙️ I’m currently building cool projects that tackles real world problems</li>
+  <li>📚 I’m currently learning <strong>Core CS Fundamentals</strong> and <strong>Backend Engineering</strong></li>
+  <li>🤝 I’m open to opportunities and eager to learn through <strong>collaboration</strong></li>
   <li>💬 Ask me about <strong>Node.js, React, MongoDB, Express</strong></li>
   <li>⚡ Fun fact: I love building things that solve real-world problems</li>
 </ul>
