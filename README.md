@@ -32,7 +32,6 @@
 Solving problems consistently on [LeetCode](https://leetcode.com/u/satyam-4/) to sharpen problem-solving fundamentals.
 
 <!--LEETCODE:START-->
-_Stats update automatically — this section is populated by a GitHub Action on first run._
 <!--LEETCODE:END-->
 
 [View LeetCode Profile →](https://leetcode.com/u/satyam-4/)
