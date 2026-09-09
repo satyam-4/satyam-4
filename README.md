@@ -50,18 +50,17 @@
 
 <!--LEETCODE:START-->
 
-**5 Problems Solved**
-
-🟢 **3** Easy&nbsp;&nbsp;&nbsp;🟡 **2** Medium&nbsp;&nbsp;&nbsp;🔴 **0** Hard
-
+| **6** | **3** | **3** | **0** |
+|:--:|:--:|:--:|:--:|
+| Solved | Easy | Medium | Hard |
 
 **Recent Questions**
 
-- [Count Commas in Range](https://leetcode.com/problems/count-commas-in-range/) · Java
-- [Smallest Stable Index II](https://leetcode.com/problems/smallest-stable-index-ii/) · Java
-- [Smallest Stable Index I](https://leetcode.com/problems/smallest-stable-index-i/) · Java
-- [Construct Uniform Parity Array II](https://leetcode.com/problems/construct-uniform-parity-array-ii/) · Java
-- [Two Sum](https://leetcode.com/problems/two-sum/) · Java
+- [Count Commas in Range II](https://leetcode.com/problems/count-commas-in-range-ii/) `Java`
+- [Count Commas in Range](https://leetcode.com/problems/count-commas-in-range/) `Java`
+- [Smallest Stable Index II](https://leetcode.com/problems/smallest-stable-index-ii/) `Java`
+- [Smallest Stable Index I](https://leetcode.com/problems/smallest-stable-index-i/) `Java`
+- [Construct Uniform Parity Array II](https://leetcode.com/problems/construct-uniform-parity-array-ii/) `Java`
 
 <!--LEETCODE:END-->
 
