@@ -44,6 +44,9 @@
 </p>
 
 <!--LEETCODE:START-->
+| **5** | **3** | **2** | **0** | **14** |
+|:---:|:---:|:---:|:---:|:---:|
+| Solved | Easy | Medium | Hard | Submissions |
 <!--LEETCODE:END-->
 
 <p align="left">
