@@ -50,17 +50,22 @@
 
 <!--LEETCODE:START-->
 
-| **6** | **3** | **3** | **0** |
-|:--:|:--:|:--:|:--:|
-| Solved | Easy | Medium | Hard |
+<div align="center">
 
-**Recent Questions**
+![Solved](https://img.shields.io/badge/Solved-6-58a6ff?style=flat-square&labelColor=161b22)&nbsp;![Easy](https://img.shields.io/badge/Easy-3-00b8a3?style=flat-square&labelColor=161b22)&nbsp;![Medium](https://img.shields.io/badge/Medium-3-ffb700?style=flat-square&labelColor=161b22)&nbsp;![Hard](https://img.shields.io/badge/Hard-0-ff375f?style=flat-square&labelColor=161b22)
 
-- [Count Commas in Range II](https://leetcode.com/problems/count-commas-in-range-ii/) `Java`
-- [Count Commas in Range](https://leetcode.com/problems/count-commas-in-range/) `Java`
-- [Smallest Stable Index II](https://leetcode.com/problems/smallest-stable-index-ii/) `Java`
-- [Smallest Stable Index I](https://leetcode.com/problems/smallest-stable-index-i/) `Java`
-- [Construct Uniform Parity Array II](https://leetcode.com/problems/construct-uniform-parity-array-ii/) `Java`
+</div>
+
+<sub><b>Recent submissions</b></sub>
+
+<table>
+<tr><th align="left">Problem</th><th align="center">Language</th></tr>
+<tr><td><a href="https://leetcode.com/problems/count-commas-in-range-ii/">Count Commas in Range II</a></td><td align="center">![Java](https://img.shields.io/badge/-Java-E76F00?style=flat-square&logo=openjdk&logoColor=white)</td></tr>
+<tr><td><a href="https://leetcode.com/problems/count-commas-in-range/">Count Commas in Range</a></td><td align="center">![Java](https://img.shields.io/badge/-Java-E76F00?style=flat-square&logo=openjdk&logoColor=white)</td></tr>
+<tr><td><a href="https://leetcode.com/problems/smallest-stable-index-ii/">Smallest Stable Index II</a></td><td align="center">![Java](https://img.shields.io/badge/-Java-E76F00?style=flat-square&logo=openjdk&logoColor=white)</td></tr>
+<tr><td><a href="https://leetcode.com/problems/smallest-stable-index-i/">Smallest Stable Index I</a></td><td align="center">![Java](https://img.shields.io/badge/-Java-E76F00?style=flat-square&logo=openjdk&logoColor=white)</td></tr>
+<tr><td><a href="https://leetcode.com/problems/construct-uniform-parity-array-ii/">Construct Uniform Parity Array II</a></td><td align="center">![Java](https://img.shields.io/badge/-Java-E76F00?style=flat-square&logo=openjdk&logoColor=white)</td></tr>
+</table>
 
 <!--LEETCODE:END-->
 
