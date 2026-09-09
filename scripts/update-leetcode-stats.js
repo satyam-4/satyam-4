@@ -52,8 +52,11 @@ function languageBadge(lang) {
   return `<img src="${url}" alt="${label}" />`;
 }
 
-function statBadge(label, value, color) {
-  return `![${label}](https://img.shields.io/badge/${label}-${value}-${color}?style=flat-square&labelColor=0d1117)`;
+function statCell(label, value, color) {
+  const url = `https://img.shields.io/badge/-${encodeURIComponent(
+    `${label} ${value}`
+  )}-${color}?style=for-the-badge&labelColor=${color}`;
+  return `<td align="center" width="25%"><img src="${url}" alt="${label}: ${value}" width="100%" /></td>`;
 }
 
 function buildDifficultyStats(data) {
@@ -62,14 +65,16 @@ function buildDifficultyStats(data) {
   const medium = data.mediumSolved ?? 0;
   const hard = data.hardSolved ?? 0;
 
-  const badges = [
-    statBadge("Solved", solved, "8957e5"),
-    statBadge("Easy", easy, "00b8a3"),
-    statBadge("Medium", medium, "ffb700"),
-    statBadge("Hard", hard, "ef4763"),
-  ].join("&nbsp;&nbsp;");
-
-  return ["<div align=\"center\">", "", badges, "", "</div>"].join("\n");
+  return [
+    '<table width="100%">',
+    "<tr>",
+    statCell("Solved", solved, "8957e5"),
+    statCell("Easy", easy, "00b8a3"),
+    statCell("Medium", medium, "ffb700"),
+    statCell("Hard", hard, "ef4763"),
+    "</tr>",
+    "</table>",
+  ].join("\n");
 }
 
 function buildRecentQuestions(data) {
@@ -104,11 +109,17 @@ function buildRecentQuestions(data) {
   }
 
   return [
-    "<table>",
-    "<tr><th align=\"left\">Problem</th><th align=\"center\">Language</th></tr>",
+    '<table width="100%">',
+    '<tr><th align="left" width="70%">Problem</th><th align="center" width="30%">Language</th></tr>',
     ...rows,
     "</table>",
   ].join("\n");
+}
+
+function buildProfileLink() {
+  const url = `https://leetcode.com/u/${USERNAME}/`;
+  const badge = `https://img.shields.io/badge/-View%20Full%20Profile-FFA116?style=for-the-badge&logo=leetcode&logoColor=black`;
+  return `<p align="center"><a href="${url}" target="_blank"><img src="${badge}" alt="View LeetCode Profile" /></a></p>`;
 }
 
 function buildLeetCodeBlock(data) {
@@ -120,6 +131,8 @@ function buildLeetCodeBlock(data) {
     "<sub><b>Recent submissions</b></sub>",
     "",
     buildRecentQuestions(data),
+    "",
+    buildProfileLink(),
     "",
     END_MARKER,
   ].join("\n");
