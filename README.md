@@ -44,21 +44,6 @@
 </p>
 
 <!--LEETCODE:START-->
-| Solved | Easy | Medium | Hard | Submissions |
-|:---:|:---:|:---:|:---:|:---:|
-| **5** | **3** | **2** | **0** | **14** |
-
-<hr>
-
-**Recent Problems**
-
-- [Count Commas in Range](https://leetcode.com/problems/count-commas-in-range/) · Java
-- [Smallest Stable Index II](https://leetcode.com/problems/smallest-stable-index-ii/) · Java
-- [Smallest Stable Index I](https://leetcode.com/problems/smallest-stable-index-i/) · Java
-- [Construct Uniform Parity Array II](https://leetcode.com/problems/construct-uniform-parity-array-ii/) · Java
-- [Two Sum](https://leetcode.com/problems/two-sum/) · Java
-
-<hr>
 <!--LEETCODE:END-->
 
 <p align="left">
