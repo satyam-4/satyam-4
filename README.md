@@ -1,8 +1,10 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/name-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/name-light.png">
-  <img alt="Satyam Mishra" src="./assets/name-light.png" height="50">
-</picture>
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/name-dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/name-light.png">
+    <img alt="Satyam Mishra" src="./assets/name-light.png" height="50">
+  </picture>
+</div>
 
 
 <div align="center">
