@@ -35,15 +35,16 @@ function formatLanguage(lang) {
 }
 
 function buildDifficultyStats(data) {
+  const solved = data.totalSolved ?? 0;
   const easy = data.easySolved ?? 0;
   const medium = data.mediumSolved ?? 0;
   const hard = data.hardSolved ?? 0;
-
+  
   return [
-    `🟢 **${easy}** Easy`,
-    `🟡 **${medium}** Medium`,
-    `🔴 **${hard}** Hard`,
-  ].join("&nbsp;&nbsp;&nbsp;");
+    `| **${solved}** | **${easy}** | **${medium}** | **${hard}** |`,
+    `|:--:|:--:|:--:|:--:|`,
+    `| Solved | Easy | Medium | Hard |`,
+  ].join("\n");
 }
 
 function buildRecentQuestions(data) {
@@ -62,9 +63,9 @@ function buildRecentQuestions(data) {
     seen.add(submission.titleSlug);
 
     questions.push(
-      `- [${submission.title}](https://leetcode.com/problems/${submission.titleSlug}/) · ${formatLanguage(
+      `- [${submission.title}](https://leetcode.com/problems/${submission.titleSlug}/) \`${formatLanguage(
         submission.lang
-      )}`
+      )}\``
     );
 
     if (questions.length === RECENT_COUNT) {
@@ -78,15 +79,10 @@ function buildRecentQuestions(data) {
 }
 
 function buildLeetCodeBlock(data) {
-  const solved = data.totalSolved ?? 0;
-
   return [
     START_MARKER,
     "",
-    `**${solved} Problems Solved**`,
-    "",
     buildDifficultyStats(data),
-    "",
     "",
     "**Recent Questions**",
     "",
@@ -127,7 +123,7 @@ async function main() {
     fs.writeFileSync(README_PATH, updated);
     console.log("README.md updated with the latest LeetCode data.");
   } else {
-    console.log("LeetCode data is unchanged — nothing to commit.");
+    console.log("LeetCode data is unchanged, nothing to commit.");
   }
 }
 
