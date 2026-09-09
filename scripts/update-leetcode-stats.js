@@ -39,21 +39,21 @@ function languageBadge(lang) {
   const label = formatLanguage(lang);
 
   if (!meta) {
-    // Unknown language reported by the API — still render something,
-    // just without a made-up color or logo.
-    return `![${label}](https://img.shields.io/badge/-${encodeURIComponent(
+    const url = `https://img.shields.io/badge/-${encodeURIComponent(
       label
-    )}-30363d?style=flat-square)`;
+    )}-30363d?style=flat-square`;
+    return `<img src="${url}" alt="${label}" />`;
   }
 
   const logoColor = meta.logoColor || "white";
-  return `![${label}](https://img.shields.io/badge/-${encodeURIComponent(
+  const url = `https://img.shields.io/badge/-${encodeURIComponent(
     label
-  )}-${meta.color}?style=flat-square&logo=${meta.logo}&logoColor=${logoColor})`;
+  )}-${meta.color}?style=flat-square&logo=${meta.logo}&logoColor=${logoColor}`;
+  return `<img src="${url}" alt="${label}" />`;
 }
 
 function statBadge(label, value, color) {
-  return `![${label}](https://img.shields.io/badge/${label}-${value}-${color}?style=flat-square&labelColor=161b22)`;
+  return `![${label}](https://img.shields.io/badge/${label}-${value}-${color}?style=flat-square&labelColor=0d1117)`;
 }
 
 function buildDifficultyStats(data) {
@@ -63,11 +63,11 @@ function buildDifficultyStats(data) {
   const hard = data.hardSolved ?? 0;
 
   const badges = [
-    statBadge("Solved", solved, "58a6ff"),
+    statBadge("Solved", solved, "8957e5"),
     statBadge("Easy", easy, "00b8a3"),
     statBadge("Medium", medium, "ffb700"),
-    statBadge("Hard", hard, "ff375f"),
-  ].join("&nbsp;");
+    statBadge("Hard", hard, "ef4763"),
+  ].join("&nbsp;&nbsp;");
 
   return ["<div align=\"center\">", "", badges, "", "</div>"].join("\n");
 }
