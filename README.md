@@ -15,7 +15,7 @@
     <img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="gmail logo" />
   </a>
   <a href="https://leetcode.com/u/satyam-4/" target="_blank">
-    <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" height="35" alt="leetcode logo" />
+    <img src="https://img.shields.io/badge/LeetCode-e08700?style=for-the-badge&logo=leetcode&logoColor=white" height="35" alt="leetcode logo" />
   </a>
 </div>
 
