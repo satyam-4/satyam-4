@@ -66,3 +66,5 @@
 <tr><td><a href="https://leetcode.com/problems/smallest-stable-index-i/">Smallest Stable Index I</a></td><td align="center"><img src="https://img.shields.io/badge/-Java-E76F00?style=flat-square&logo=openjdk&logoColor=white" alt="Java" /></td></tr>
 <tr><td><a href="https://leetcode.com/problems/construct-uniform-parity-array-ii/">Construct Uniform Parity Array II</a></td><td align="center"><img src="https://img.shields.io/badge/-Java-E76F00?style=flat-square&logo=openjdk&logoColor=white" alt="Java" /></td></tr>
 </table>
+
+<!--LEETCODE:END-->
