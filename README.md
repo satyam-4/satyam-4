@@ -50,26 +50,23 @@
 
 <!--LEETCODE:START-->
 
-<table width="100%">
+<table>
 <tr>
-<td align="center" width="25%"><img src="https://img.shields.io/badge/-Solved%206-8957e5?style=for-the-badge&labelColor=8957e5" alt="Solved: 6" width="100%" /></td>
-<td align="center" width="25%"><img src="https://img.shields.io/badge/-Easy%203-00b8a3?style=for-the-badge&labelColor=00b8a3" alt="Easy: 3" width="100%" /></td>
-<td align="center" width="25%"><img src="https://img.shields.io/badge/-Medium%203-ffb700?style=for-the-badge&labelColor=ffb700" alt="Medium: 3" width="100%" /></td>
-<td align="center" width="25%"><img src="https://img.shields.io/badge/-Hard%200-ef4763?style=for-the-badge&labelColor=ef4763" alt="Hard: 0" width="100%" /></td>
+<td align="center"><img src="https://img.shields.io/badge/-Solved%206-5a32a3?style=for-the-badge&labelColor=5a32a3" alt="Solved: 6" width="210" height="50" /></td>
+<td align="center"><img src="https://img.shields.io/badge/-Easy%203-1a7f37?style=for-the-badge&labelColor=1a7f37" alt="Easy: 3" width="210" height="50" /></td>
+<td align="center"><img src="https://img.shields.io/badge/-Medium%203-9a6700?style=for-the-badge&labelColor=9a6700" alt="Medium: 3" width="210" height="50" /></td>
+<td align="center"><img src="https://img.shields.io/badge/-Hard%200-cf222e?style=for-the-badge&labelColor=cf222e" alt="Hard: 0" width="210" height="50" /></td>
 </tr>
 </table>
 
 <sub><b>Recent submissions</b></sub>
 
-<table width="100%">
-<tr><th align="left" width="70%">Problem</th><th align="center" width="30%">Language</th></tr>
-<tr><td><a href="https://leetcode.com/problems/count-commas-in-range-ii/">Count Commas in Range II</a></td><td align="center"><img src="https://img.shields.io/badge/-Java-E76F00?style=flat-square&logo=openjdk&logoColor=white" alt="Java" /></td></tr>
-<tr><td><a href="https://leetcode.com/problems/count-commas-in-range/">Count Commas in Range</a></td><td align="center"><img src="https://img.shields.io/badge/-Java-E76F00?style=flat-square&logo=openjdk&logoColor=white" alt="Java" /></td></tr>
-<tr><td><a href="https://leetcode.com/problems/smallest-stable-index-ii/">Smallest Stable Index II</a></td><td align="center"><img src="https://img.shields.io/badge/-Java-E76F00?style=flat-square&logo=openjdk&logoColor=white" alt="Java" /></td></tr>
-<tr><td><a href="https://leetcode.com/problems/smallest-stable-index-i/">Smallest Stable Index I</a></td><td align="center"><img src="https://img.shields.io/badge/-Java-E76F00?style=flat-square&logo=openjdk&logoColor=white" alt="Java" /></td></tr>
-<tr><td><a href="https://leetcode.com/problems/construct-uniform-parity-array-ii/">Construct Uniform Parity Array II</a></td><td align="center"><img src="https://img.shields.io/badge/-Java-E76F00?style=flat-square&logo=openjdk&logoColor=white" alt="Java" /></td></tr>
-</table>
+- **[Count Commas in Range II](https://leetcode.com/problems/count-commas-in-range-ii/)** &nbsp;&nbsp; <img src="https://img.shields.io/badge/-Java-E76F00?style=flat-square&logo=openjdk&logoColor=white" alt="Java" />
+- **[Count Commas in Range](https://leetcode.com/problems/count-commas-in-range/)** &nbsp;&nbsp; <img src="https://img.shields.io/badge/-Java-E76F00?style=flat-square&logo=openjdk&logoColor=white" alt="Java" />
+- **[Smallest Stable Index II](https://leetcode.com/problems/smallest-stable-index-ii/)** &nbsp;&nbsp; <img src="https://img.shields.io/badge/-Java-E76F00?style=flat-square&logo=openjdk&logoColor=white" alt="Java" />
+- **[Smallest Stable Index I](https://leetcode.com/problems/smallest-stable-index-i/)** &nbsp;&nbsp; <img src="https://img.shields.io/badge/-Java-E76F00?style=flat-square&logo=openjdk&logoColor=white" alt="Java" />
+- **[Construct Uniform Parity Array II](https://leetcode.com/problems/construct-uniform-parity-array-ii/)** &nbsp;&nbsp; <img src="https://img.shields.io/badge/-Java-E76F00?style=flat-square&logo=openjdk&logoColor=white" alt="Java" />
 
-<p align="center"><a href="https://leetcode.com/u/satyam-4/" target="_blank"><img src="https://img.shields.io/badge/-View%20Full%20Profile-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="View LeetCode Profile" /></a></p>
+<p align="center"><a href="https://leetcode.com/u/satyam-4/" target="_blank"><img src="https://img.shields.io/badge/-View%20Full%20Profile-1a1a1a?style=for-the-badge&logo=leetcode&logoColor=FFA116" alt="View LeetCode Profile" /></a></p>
 
 <!--LEETCODE:END-->
