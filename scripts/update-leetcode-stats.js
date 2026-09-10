@@ -52,11 +52,14 @@ function languageBadge(lang) {
   return `<img src="${url}" alt="${label}" />`;
 }
 
+const STAT_BADGE_WIDTH = 210;
+const STAT_BADGE_HEIGHT = 50;
+
 function statCell(label, value, color) {
   const url = `https://img.shields.io/badge/-${encodeURIComponent(
     `${label} ${value}`
   )}-${color}?style=for-the-badge&labelColor=${color}`;
-  return `<td align="center" width="25%"><img src="${url}" alt="${label}: ${value}" width="100%" /></td>`;
+  return `<td align="center"><img src="${url}" alt="${label}: ${value}" width="${STAT_BADGE_WIDTH}" height="${STAT_BADGE_HEIGHT}" /></td>`;
 }
 
 function buildDifficultyStats(data) {
@@ -64,14 +67,14 @@ function buildDifficultyStats(data) {
   const easy = data.easySolved ?? 0;
   const medium = data.mediumSolved ?? 0;
   const hard = data.hardSolved ?? 0;
-
+  
   return [
-    '<table width="100%">',
+    "<table>",
     "<tr>",
-    statCell("Solved", solved, "8957e5"),
-    statCell("Easy", easy, "00b8a3"),
-    statCell("Medium", medium, "ffb700"),
-    statCell("Hard", hard, "ef4763"),
+    statCell("Solved", solved, "5a32a3"),
+    statCell("Easy", easy, "1a7f37"),
+    statCell("Medium", medium, "9a6700"),
+    statCell("Hard", hard, "cf222e"),
     "</tr>",
     "</table>",
   ].join("\n");
@@ -93,10 +96,11 @@ function buildRecentQuestions(data) {
     seen.add(submission.titleSlug);
 
     const url = `https://leetcode.com/problems/${submission.titleSlug}/`;
+    
     rows.push(
-      `<tr><td><a href="${url}">${submission.title}</a></td><td align="center">${languageBadge(
+      `- **[${submission.title}](${url})** &nbsp;&nbsp; ${languageBadge(
         submission.lang
-      )}</td></tr>`
+      )}`
     );
 
     if (rows.length === RECENT_COUNT) {
@@ -104,21 +108,12 @@ function buildRecentQuestions(data) {
     }
   }
 
-  if (!rows.length) {
-    return "_No recent questions found._";
-  }
-
-  return [
-    '<table width="100%">',
-    '<tr><th align="left" width="70%">Problem</th><th align="center" width="30%">Language</th></tr>',
-    ...rows,
-    "</table>",
-  ].join("\n");
+  return rows.length ? rows.join("\n") : "_No recent questions found._";
 }
 
 function buildProfileLink() {
   const url = `https://leetcode.com/u/${USERNAME}/`;
-  const badge = `https://img.shields.io/badge/-View%20Full%20Profile-FFA116?style=for-the-badge&logo=leetcode&logoColor=black`;
+  const badge = `https://img.shields.io/badge/-View%20Full%20Profile-1a1a1a?style=for-the-badge&logo=leetcode&logoColor=FFA116`;
   return `<p align="center"><a href="${url}" target="_blank"><img src="${badge}" alt="View LeetCode Profile" /></a></p>`;
 }
 
