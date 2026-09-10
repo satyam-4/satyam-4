@@ -73,7 +73,7 @@ function buildDifficultyStats(data) {
     "<tr>",
     statCell("Solved", solved, "5a32a3"),
     statCell("Easy", easy, "1a7f37"),
-    statCell("Medium", medium, "9a6700"),
+    statCell("Medium", medium, "eb9c00"),
     statCell("Hard", hard, "cf222e"),
     "</tr>",
     "</table>",
