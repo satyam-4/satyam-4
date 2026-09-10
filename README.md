@@ -54,7 +54,7 @@
 <tr>
 <td align="center"><img src="https://img.shields.io/badge/-Solved%206-5a32a3?style=for-the-badge&labelColor=5a32a3" alt="Solved: 6" width="210" height="50" /></td>
 <td align="center"><img src="https://img.shields.io/badge/-Easy%203-1a7f37?style=for-the-badge&labelColor=1a7f37" alt="Easy: 3" width="210" height="50" /></td>
-<td align="center"><img src="https://img.shields.io/badge/-Medium%203-9a6700?style=for-the-badge&labelColor=9a6700" alt="Medium: 3" width="210" height="50" /></td>
+<td align="center"><img src="https://img.shields.io/badge/-Medium%203-eb9c00?style=for-the-badge&labelColor=eb9c00" alt="Medium: 3" width="210" height="50" /></td>
 <td align="center"><img src="https://img.shields.io/badge/-Hard%200-cf222e?style=for-the-badge&labelColor=cf222e" alt="Hard: 0" width="210" height="50" /></td>
 </tr>
 </table>
