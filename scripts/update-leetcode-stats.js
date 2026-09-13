@@ -12,7 +12,7 @@ const RECENT_COUNT = 5;
 const LANGUAGE_META = {
   cpp: { label: "C++", color: "00599C", logo: "cplusplus" },
   c: { label: "C", color: "A8B9CC", logo: "c" },
-  java: { label: "Java", color: "E76F00", logo: "openjdk", logoColor: "white" },
+  java: { label: "Java", color: "E76F00", logo: "openjdk", logoColor: "black", labelColor: "000000" },
   python: { label: "Python", color: "3776AB", logo: "python" },
   python3: { label: "Python3", color: "3776AB", logo: "python" },
   javascript: { label: "JavaScript", color: "F7DF1E", logo: "javascript", logoColor: "black" },
