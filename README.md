@@ -61,11 +61,11 @@
 
 <sub><b>Recent submissions</b></sub>
 
-- **[Unique 3-Digit Even Numbers](https://leetcode.com/problems/unique-3-digit-even-numbers/)** &nbsp;&nbsp; <img src="https://img.shields.io/badge/-Java-E76F00?style=flat-square&logo=openjdk&logoColor=white" alt="Java" />
-- **[Count Commas in Range II](https://leetcode.com/problems/count-commas-in-range-ii/)** &nbsp;&nbsp; <img src="https://img.shields.io/badge/-Java-E76F00?style=flat-square&logo=openjdk&logoColor=white" alt="Java" />
-- **[Count Commas in Range](https://leetcode.com/problems/count-commas-in-range/)** &nbsp;&nbsp; <img src="https://img.shields.io/badge/-Java-E76F00?style=flat-square&logo=openjdk&logoColor=white" alt="Java" />
-- **[Smallest Stable Index II](https://leetcode.com/problems/smallest-stable-index-ii/)** &nbsp;&nbsp; <img src="https://img.shields.io/badge/-Java-E76F00?style=flat-square&logo=openjdk&logoColor=white" alt="Java" />
-- **[Smallest Stable Index I](https://leetcode.com/problems/smallest-stable-index-i/)** &nbsp;&nbsp; <img src="https://img.shields.io/badge/-Java-E76F00?style=flat-square&logo=openjdk&logoColor=white" alt="Java" />
+- **[Unique 3-Digit Even Numbers](https://leetcode.com/problems/unique-3-digit-even-numbers/)** &nbsp;&nbsp; <img src="https://img.shields.io/badge/-Java-E76F00?style=flat-square&logo=openjdk&logoColor=black" alt="Java" />
+- **[Count Commas in Range II](https://leetcode.com/problems/count-commas-in-range-ii/)** &nbsp;&nbsp; <img src="https://img.shields.io/badge/-Java-E76F00?style=flat-square&logo=openjdk&logoColor=black" alt="Java" />
+- **[Count Commas in Range](https://leetcode.com/problems/count-commas-in-range/)** &nbsp;&nbsp; <img src="https://img.shields.io/badge/-Java-E76F00?style=flat-square&logo=openjdk&logoColor=black" alt="Java" />
+- **[Smallest Stable Index II](https://leetcode.com/problems/smallest-stable-index-ii/)** &nbsp;&nbsp; <img src="https://img.shields.io/badge/-Java-E76F00?style=flat-square&logo=openjdk&logoColor=black" alt="Java" />
+- **[Smallest Stable Index I](https://leetcode.com/problems/smallest-stable-index-i/)** &nbsp;&nbsp; <img src="https://img.shields.io/badge/-Java-E76F00?style=flat-square&logo=openjdk&logoColor=black" alt="Java" />
 
 <p align="center"><a href="https://leetcode.com/u/satyam-4/" target="_blank"><img src="https://img.shields.io/badge/-View%20Full%20Profile-1a1a1a?style=for-the-badge&logo=leetcode&logoColor=FFA116" alt="View LeetCode Profile" /></a></p>
 
