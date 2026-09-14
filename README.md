@@ -22,7 +22,7 @@
 <hr>
 
 <h3 align="left">
-  <code>about-me-and-tech-stack</code><code>@satyam-4</code>
+  <code>about-me-and-tech-stack</code>
 </h3>
 > <code>Backend-focused developer working with <b>Node.js, Express, React, and Databases</b>. Currently sharpening <b>Core CS Fundamentals</b> and building scalable applications to solve real-world problems.</code>
 
@@ -79,7 +79,7 @@
 <hr>
 
 <h3 align="left">
-  <code>data-structures-and-algorithms</code><code>@satyam-4</code>
+  <code>data-structures-and-algorithms</code>
 </h3>
 > <code>Practicing DSA consistently on <a href="https://leetcode.com/u/satyam-4/" target="_blank"><b>LeetCode</b></a></code>
 
