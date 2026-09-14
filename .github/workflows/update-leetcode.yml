@@ -2,7 +2,7 @@ name: Update LeetCode Stats
 
 on:
   schedule:
-    - cron: "0 3 * * *"
+    - cron: '0 3 * * *'
   workflow_dispatch:
 
 permissions:
@@ -20,21 +20,23 @@ jobs:
         with:
           node-version: 20
 
-      - name: Fetch stats and update README
+      - name: Generate LeetCode SVG
+        env:
+          LEETCODE_USERNAME: satyam-4
         run: node scripts/update-leetcode-stats.js
 
-      - name: Commit and push changes if README was updated
+      - name: Commit and push changes if SVG was updated
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md
+          git add leetcode_stats.svg
 
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
           fi
 
-          git commit -m "chore: update LeetCode stats"
+          git commit -m "Auto-update LeetCode stats SVG"
 
           for attempt in 1 2 3 4 5; do
             if git push origin HEAD:main; then

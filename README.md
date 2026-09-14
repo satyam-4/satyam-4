@@ -48,25 +48,4 @@
   <a href="https://leetcode.com/u/satyam-4/" target="_blank"><strong>LeetCode</strong></a>
 </p>
 
-<!--LEETCODE:START-->
-
-<table>
-<tr>
-<td align="center"><img src="https://img.shields.io/badge/-Solved%207-5a32a3?style=for-the-badge&labelColor=5a32a3" alt="Solved: 7" width="210" height="50" /></td>
-<td align="center"><img src="https://img.shields.io/badge/-Easy%204-1a7f37?style=for-the-badge&labelColor=1a7f37" alt="Easy: 4" width="210" height="50" /></td>
-<td align="center"><img src="https://img.shields.io/badge/-Medium%203-eb9c00?style=for-the-badge&labelColor=eb9c00" alt="Medium: 3" width="210" height="50" /></td>
-<td align="center"><img src="https://img.shields.io/badge/-Hard%200-cf222e?style=for-the-badge&labelColor=cf222e" alt="Hard: 0" width="210" height="50" /></td>
-</tr>
-</table>
-
-<sub><b>Recent submissions</b></sub>
-
-- **[Unique 3-Digit Even Numbers](https://leetcode.com/problems/unique-3-digit-even-numbers/)** &nbsp;&nbsp; <img src="https://img.shields.io/badge/-Java-E76F00?style=flat-square&logo=openjdk&logoColor=white" alt="Java" />
-- **[Count Commas in Range II](https://leetcode.com/problems/count-commas-in-range-ii/)** &nbsp;&nbsp; <img src="https://img.shields.io/badge/-Java-E76F00?style=flat-square&logo=openjdk&logoColor=white" alt="Java" />
-- **[Count Commas in Range](https://leetcode.com/problems/count-commas-in-range/)** &nbsp;&nbsp; <img src="https://img.shields.io/badge/-Java-E76F00?style=flat-square&logo=openjdk&logoColor=white" alt="Java" />
-- **[Smallest Stable Index II](https://leetcode.com/problems/smallest-stable-index-ii/)** &nbsp;&nbsp; <img src="https://img.shields.io/badge/-Java-E76F00?style=flat-square&logo=openjdk&logoColor=white" alt="Java" />
-- **[Smallest Stable Index I](https://leetcode.com/problems/smallest-stable-index-i/)** &nbsp;&nbsp; <img src="https://img.shields.io/badge/-Java-E76F00?style=flat-square&logo=openjdk&logoColor=white" alt="Java" />
-
-<p align="center"><a href="https://leetcode.com/u/satyam-4/" target="_blank"><img src="https://img.shields.io/badge/-View%20Full%20Profile-1a1a1a?style=for-the-badge&logo=leetcode&logoColor=FFA116" alt="View LeetCode Profile" /></a></p>
-
-<!--LEETCODE:END-->
+<img src="leetcode_stats.svg" alt="LeetCode Stats" width="100%" />

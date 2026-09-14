@@ -1,86 +1,62 @@
 const fs = require("fs");
 
-const USERNAME = "satyam-4";
-const API_URL = `https://leetcode-api-faisalshohag.vercel.app/${USERNAME}`;
-const README_PATH = "README.md";
+const LEETCODE_USERNAME = process.env.LEETCODE_USERNAME || "addynoven";
+const API_URL = `https://leetcode-api-faisalshohag.vercel.app/${LEETCODE_USERNAME}`;
 
-const START_MARKER = "<!--LEETCODE:START-->";
-const END_MARKER = "<!--LEETCODE:END-->";
+const WIDTH = 985;
+const LINE_HEIGHT = 22;
+const COL_X = 25;
+const RECENT_COUNT = 8;
+const MAX_TITLE_LEN = 68;
 
-const RECENT_COUNT = 5;
-
-const LANGUAGE_META = {
-  cpp: { label: "C++", color: "00599C", logo: "cplusplus" },
-  c: { label: "C", color: "A8B9CC", logo: "c" },
-  java: { label: "Java", color: "E76F00", logo: "openjdk", logoColor: "white" },
-  python: { label: "Python", color: "3776AB", logo: "python" },
-  python3: { label: "Python3", color: "3776AB", logo: "python" },
-  javascript: { label: "JavaScript", color: "F7DF1E", logo: "javascript", logoColor: "black" },
-  typescript: { label: "TypeScript", color: "3178C6", logo: "typescript" },
-  csharp: { label: "C#", color: "239120", logo: "csharp" },
-  golang: { label: "Go", color: "00ADD8", logo: "go" },
-  ruby: { label: "Ruby", color: "CC342D", logo: "ruby" },
-  swift: { label: "Swift", color: "FA7343", logo: "swift" },
-  kotlin: { label: "Kotlin", color: "7F52FF", logo: "kotlin" },
-  rust: { label: "Rust", color: "000000", logo: "rust" },
-  scala: { label: "Scala", color: "DC322F", logo: "scala" },
-  php: { label: "PHP", color: "777BB4", logo: "php" },
-  mysql: { label: "MySQL", color: "4479A1", logo: "mysql" },
-  bash: { label: "Bash", color: "4EAA25", logo: "gnubash" },
+const DIFF_COLORS = {
+  solved: "#4cc9f0",
+  easy: "#3fb950",
+  medium: "#ffb703",
+  hard: "#f85149",
 };
 
-function formatLanguage(lang) {
-  if (!lang) return "Unknown";
-  return LANGUAGE_META[lang]?.label || lang;
+const FONT_FAMILY =
+  "ConsolasFallback,Cascadia Code,Fira Code,ui-monospace," +
+  "DejaVu Sans Mono,Liberation Mono,Consolas,Menlo,monospace";
+
+const FONT_FACE_SRC =
+  "local('Cascadia Code'), local('Fira Code'), local('DejaVu Sans Mono'), " +
+  "local('Liberation Mono'), local('Consolas'), local('Menlo')";
+
+function esc(text) {
+  return String(text)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#x27;");
 }
 
-function languageBadge(lang) {
-  const meta = LANGUAGE_META[lang];
-  const label = formatLanguage(lang);
-
-  if (!meta) {
-    const url = `https://img.shields.io/badge/-${encodeURIComponent(
-      label
-    )}-30363d?style=flat-square`;
-    return `<img src="${url}" alt="${label}" />`;
+function truncate(text, maxLen = MAX_TITLE_LEN) {
+  const str = String(text);
+  if (str.length > maxLen) {
+    return str.slice(0, maxLen - 3) + "...";
   }
-
-  const logoColor = meta.logoColor || "white";
-  const url = `https://img.shields.io/badge/-${encodeURIComponent(
-    label
-  )}-${meta.color}?style=flat-square&logo=${meta.logo}&logoColor=${logoColor}`;
-  return `<img src="${url}" alt="${label}" />`;
+  return str;
 }
 
-const STAT_BADGE_WIDTH = 210;
-const STAT_BADGE_HEIGHT = 50;
-
-function statCell(label, value, color) {
-  const url = `https://img.shields.io/badge/-${encodeURIComponent(
-    `${label} ${value}`
-  )}-${color}?style=for-the-badge&labelColor=${color}`;
-  return `<td align="center"><img src="${url}" alt="${label}: ${value}" width="${STAT_BADGE_WIDTH}" height="${STAT_BADGE_HEIGHT}" /></td>`;
+async function fetchLeetCodeStats() {
+  const res = await fetch(API_URL);
+  if (!res.ok) {
+    throw new Error(
+      `LeetCode stats API request failed: ${res.status} ${res.statusText}`
+    );
+  }
+  return await res.json();
 }
 
-function buildDifficultyStats(data) {
+function generateLeetCodeSvg(data, outputPath = "leetcode_stats.svg") {
   const solved = data.totalSolved ?? 0;
   const easy = data.easySolved ?? 0;
   const medium = data.mediumSolved ?? 0;
   const hard = data.hardSolved ?? 0;
-  
-  return [
-    "<table>",
-    "<tr>",
-    statCell("Solved", solved, "5a32a3"),
-    statCell("Easy", easy, "1a7f37"),
-    statCell("Medium", medium, "eb9c00"),
-    statCell("Hard", hard, "cf222e"),
-    "</tr>",
-    "</table>",
-  ].join("\n");
-}
 
-function buildRecentQuestions(data) {
   const submissions = Array.isArray(data.recentSubmissions)
     ? data.recentSubmissions
     : [];
@@ -88,82 +64,110 @@ function buildRecentQuestions(data) {
   const seen = new Set();
   const rows = [];
 
-  for (const submission of submissions) {
-    if (!submission?.titleSlug || seen.has(submission.titleSlug)) {
+  for (const sub of submissions) {
+    const slug = sub?.titleSlug;
+    if (!slug || seen.has(slug)) {
       continue;
     }
-
-    seen.add(submission.titleSlug);
-
-    const url = `https://leetcode.com/problems/${submission.titleSlug}/`;
-    
-    rows.push(
-      `- **[${submission.title}](${url})** &nbsp;&nbsp; ${languageBadge(
-        submission.lang
-      )}`
-    );
-
+    seen.add(slug);
+    rows.push({
+      title: sub.title || slug,
+      lang: sub.lang || "",
+    });
     if (rows.length === RECENT_COUNT) {
       break;
     }
   }
 
-  return rows.length ? rows.join("\n") : "_No recent questions found._";
-}
+  const header_y = 30;
+  const stats_y = 58;
+  const divider_y = 78;
+  const first_row_y = 106;
+  const height = first_row_y + Math.max(rows.length, 1) * LINE_HEIGHT + 18;
 
-function buildProfileLink() {
-  const url = `https://leetcode.com/u/${USERNAME}/`;
-  const badge = `https://img.shields.io/badge/-View%20Full%20Profile-1a1a1a?style=for-the-badge&logo=leetcode&logoColor=FFA116`;
-  return `<p align="center"><a href="${url}" target="_blank"><img src="${badge}" alt="View LeetCode Profile" /></a></p>`;
-}
+  const svg = [];
+  svg.push(
+    `<svg xmlns="http://www.w3.org/2000/svg" width="${WIDTH}" height="${height}" font-family="${FONT_FAMILY}" font-size="14px">`
+  );
+  svg.push("<style>");
+  svg.push("@font-face {");
+  svg.push(`  src: ${FONT_FACE_SRC};`);
+  svg.push("  font-family: 'ConsolasFallback';");
+  svg.push("  font-display: swap;");
+  svg.push("}");
+  svg.push("text, tspan { white-space: pre; }");
+  svg.push("</style>");
+  svg.push(`<rect width="${WIDTH}" height="${height}" fill="#0b0e1a" rx="15"/>`);
+  svg.push("");
 
-function buildLeetCodeBlock(data) {
-  return [
-    START_MARKER,
-    "",
-    buildDifficultyStats(data),
-    "",
-    "<sub><b>Recent submissions</b></sub>",
-    "",
-    buildRecentQuestions(data),
-    "",
-    buildProfileLink(),
-    "",
-    END_MARKER,
-  ].join("\n");
+  const dashes = "\u2500".repeat(68);
+  svg.push(
+    `<text x="${COL_X}" y="${header_y}" fill="#d8d9f0" font-size="14px">` +
+      `leetcode-stats` +
+      `<tspan fill="#565a7a">@</tspan>` +
+      `<tspan fill="#f72585">aditya-sahu</tspan>` +
+      `<tspan fill="#23263a"> ${dashes}</tspan>` +
+      `</text>`
+  );
+  svg.push("");
+
+  const statDefs = [
+    ["Solved", solved, DIFF_COLORS.solved],
+    ["Easy", easy, DIFF_COLORS.easy],
+    ["Medium", medium, DIFF_COLORS.medium],
+    ["Hard", hard, DIFF_COLORS.hard],
+  ];
+
+  const colWidth = Math.floor((WIDTH - 2 * COL_X) / statDefs.length);
+  const statSpans = [];
+
+  for (let i = 0; i < statDefs.length; i++) {
+    const [label, value, color] = statDefs[i];
+    const x = COL_X + i * colWidth;
+    statSpans.push(
+      `<tspan x="${x}" fill="${color}">${esc(label)}: ${value}</tspan>`
+    );
+  }
+
+  svg.push(`<text y="${stats_y}" font-size="15px">${statSpans.join("")}</text>`);
+  svg.push("");
+
+  const subDashes = "\u2500".repeat(68);
+  svg.push(
+    `<text x="${COL_X}" y="${divider_y}">` +
+      `<tspan fill="#565a7a">- </tspan><tspan fill="#d8d9f0">Recent Submissions</tspan>` +
+      `<tspan fill="#23263a"> ${subDashes}</tspan></text>`
+  );
+  svg.push("");
+
+  if (rows.length > 0) {
+    rows.forEach((row, i) => {
+      const y = first_row_y + i * LINE_HEIGHT;
+      const num = String(i + 1).padStart(2, " ") + ".";
+      svg.push(
+        `<text y="${y}">` +
+          `<tspan x="${COL_X}" fill="#3d4159">${num}</tspan>` +
+          `<tspan x="${COL_X + 35}" fill="#7dd3fc">${esc(truncate(row.title))}</tspan>` +
+          `<tspan x="${WIDTH - 140}" fill="#9d4edd">${esc(row.lang)}</tspan>` +
+          `</text>`
+      );
+    });
+  } else {
+    svg.push(
+      `<text x="${COL_X}" y="${first_row_y}" fill="#565a7a">` +
+        `No recent submissions found.</text>`
+    );
+  }
+
+  svg.push("</svg>");
+
+  fs.writeFileSync(outputPath, svg.join("\n"), "utf8");
+  console.log(`LeetCode SVG written to ${outputPath}`);
 }
 
 async function main() {
-  const res = await fetch(API_URL);
-
-  if (!res.ok) {
-    throw new Error(
-      `LeetCode stats API request failed: ${res.status} ${res.statusText}`
-    );
-  }
-
-  const data = await res.json();
-
-  const block = buildLeetCodeBlock(data);
-
-  const readme = fs.readFileSync(README_PATH, "utf8");
-
-  const regex = new RegExp(`${START_MARKER}[\\s\\S]*?${END_MARKER}`);
-
-  if (!regex.test(readme)) {
-    throw new Error(
-      `Could not find ${START_MARKER} ... ${END_MARKER} in ${README_PATH}.`
-    );
-  }
-
-  const updated = readme.replace(regex, block);
-
-  if (updated !== readme) {
-    fs.writeFileSync(README_PATH, updated);
-    console.log("README.md updated with the latest LeetCode data.");
-  } else {
-    console.log("LeetCode data is unchanged, nothing to commit.");
-  }
+  const stats = await fetchLeetCodeStats();
+  generateLeetCodeSvg(stats);
 }
 
 main().catch((err) => {
