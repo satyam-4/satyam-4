@@ -90,3 +90,9 @@
     <img src="./leetcode_stats.svg" alt="LeetCode Stats" width="100%" />
   </a>
 </p>
+
+<hr>
+
+<p align="center">
+  <img src="./languages_stats.svg" alt="Top Languages" width="100%" />
+</p>

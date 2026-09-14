@@ -25,18 +25,23 @@ jobs:
           LEETCODE_USERNAME: satyam-4
         run: node scripts/update-leetcode-stats.js
 
-      - name: Commit and push changes if SVG was updated
+      - name: Generate GitHub Languages SVG
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/update-github-langs.js
+
+      - name: Commit and push changes if SVGs were updated
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add leetcode_stats.svg
+          git add leetcode_stats.svg languages_stats.svg
 
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
           fi
 
-          git commit -m "Auto-update LeetCode stats SVG"
+          git commit -m "Auto-update profile stats SVGs"
 
           for attempt in 1 2 3 4 5; do
             if git push origin HEAD:main; then
