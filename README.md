@@ -93,6 +93,11 @@
 
 <hr>
 
+<h3 align="left">
+  <code>top-languages</code>
+</h3>
+> <code>Calculated dynamically from byte counts across public repositories.</code>
+
 <p align="center">
   <img src="./languages_stats.svg" alt="Top Languages" width="100%" />
 </p>
