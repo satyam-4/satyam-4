@@ -2,6 +2,8 @@ const fs = require("fs");
 
 const LEETCODE_USERNAME = process.env.LEETCODE_USERNAME || "satyam-4";
 const API_URL = `https://leetcode-api-faisalshohag.vercel.app/${LEETCODE_USERNAME}`;
+const README_PATH = "README.md";
+const SVG_PATH = "leetcode_stats.svg";
 
 const WIDTH = 985;
 const LINE_HEIGHT = 22;
@@ -51,7 +53,7 @@ async function fetchLeetCodeStats() {
   return await res.json();
 }
 
-function generateLeetCodeSvg(data, outputPath = "leetcode_stats.svg") {
+function generateLeetCodeSvg(data, outputPath = SVG_PATH) {
   const solved = data.totalSolved ?? 0;
   const easy = data.easySolved ?? 0;
   const medium = data.mediumSolved ?? 0;
@@ -165,9 +167,36 @@ function generateLeetCodeSvg(data, outputPath = "leetcode_stats.svg") {
   console.log(`LeetCode SVG written to ${outputPath}`);
 }
 
+function bustReadmeImageCache(readmePath = README_PATH, svgPath = SVG_PATH) {
+  if (!fs.existsSync(readmePath)) {
+    console.log(`${readmePath} not found, skipping cache-bust step.`);
+    return;
+  }
+
+  const readme = fs.readFileSync(readmePath, "utf8");
+  const cacheBuster = Date.now();
+
+  const pattern = new RegExp(
+    `(src=")\\.\\/${svgPath.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(?:\\?[^"]*)?(")`,
+    "g"
+  );
+
+  const updated = readme.replace(pattern, `$1./${svgPath}?v=${cacheBuster}$2`);
+
+  if (updated !== readme) {
+    fs.writeFileSync(readmePath, updated, "utf8");
+    console.log(`README.md image reference cache-busted (v=${cacheBuster}).`);
+  } else {
+    console.log(
+      `No matching "./${svgPath}" <img> src found in ${readmePath} — nothing to cache-bust.`
+    );
+  }
+}
+
 async function main() {
   const stats = await fetchLeetCodeStats();
   generateLeetCodeSvg(stats);
+  bustReadmeImageCache();
 }
 
 main().catch((err) => {
