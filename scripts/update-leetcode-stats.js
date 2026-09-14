@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const LEETCODE_USERNAME = process.env.LEETCODE_USERNAME || "addynoven";
+const LEETCODE_USERNAME = process.env.LEETCODE_USERNAME || "satyam-4";
 const API_URL = `https://leetcode-api-faisalshohag.vercel.app/${LEETCODE_USERNAME}`;
 
 const WIDTH = 985;
@@ -105,7 +105,7 @@ function generateLeetCodeSvg(data, outputPath = "leetcode_stats.svg") {
     `<text x="${COL_X}" y="${header_y}" fill="#d8d9f0" font-size="14px">` +
       `leetcode-stats` +
       `<tspan fill="#565a7a">@</tspan>` +
-      `<tspan fill="#f72585">aditya-sahu</tspan>` +
+      `<tspan fill="#f72585">${esc(LEETCODE_USERNAME)}</tspan>` +
       `<tspan fill="#23263a"> ${dashes}</tspan>` +
       `</text>`
   );
