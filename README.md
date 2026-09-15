@@ -31,53 +31,48 @@
 <br>
 <br>
 
-<table>
-  <tr>
-    <td width="22%"><strong>Languages</strong></td>
-    <td>
-      <img src="https://img.shields.io/badge/-JavaScript-0b0e1a?style=flat&logo=javascript&logoColor=F7DF1E" alt="JavaScript" />
-      <img src="https://img.shields.io/badge/-TypeScript-0b0e1a?style=flat&logo=typescript&logoColor=007ACC" alt="TypeScript" />
-      <img src="https://img.shields.io/badge/-C++-0b0e1a?style=flat&logo=cplusplus&logoColor=00599C" alt="C++" />
-      <img src="https://img.shields.io/badge/-C-0b0e1a?style=flat&logo=c&logoColor=A8B9CC" alt="C" />
-      <img src="https://img.shields.io/badge/-Java-0b0e1a?style=flat&logo=openjdk&logoColor=ED8B00" alt="Java" />
-    </td>
-  </tr>
-  <tr>
-    <td width="22%"><strong>Backend & Databases</strong></td>
-    <td>
-      <img src="https://img.shields.io/badge/-Node.js-0b0e1a?style=flat&logo=node.js&logoColor=6DA55F" alt="Node.js" />
-      <img src="https://img.shields.io/badge/-Express-0b0e1a?style=flat&logo=express&logoColor=ffffff" alt="Express" />
-      <img src="https://img.shields.io/badge/-MongoDB-0b0e1a?style=flat&logo=mongodb&logoColor=4ea94b" alt="MongoDB" />
-      <img src="https://img.shields.io/badge/-PostgreSQL-0b0e1a?style=flat&logo=postgresql&logoColor=316192" alt="Postgres" />
-      <img src="https://img.shields.io/badge/-Redis-0b0e1a?style=flat&logo=redis&logoColor=DD0031" alt="Redis" />
-      <img src="https://img.shields.io/badge/-Prisma-0b0e1a?style=flat&logo=prisma&logoColor=3982CE" alt="Prisma" />
-    </td>
-  </tr>
-  <tr>
-    <td width="22%"><strong>Frontend</strong></td>
-    <td>
-      <img src="https://img.shields.io/badge/-React-0b0e1a?style=flat&logo=react&logoColor=61DAFB" alt="React" />
-      <img src="https://img.shields.io/badge/-Next.js-0b0e1a?style=flat&logo=next.js&logoColor=ffffff" alt="Next.js" />
-      <img src="https://img.shields.io/badge/-Vue.js-0b0e1a?style=flat&logo=vuedotjs&logoColor=4FC08D" alt="Vue.js" />
-      <img src="https://img.shields.io/badge/-Redux-0b0e1a?style=flat&logo=redux&logoColor=593d88" alt="Redux" />
-      <img src="https://img.shields.io/badge/-TailwindCSS-0b0e1a?style=flat&logo=tailwind-css&logoColor=38B2AC" alt="TailwindCSS" />
-      <img src="https://img.shields.io/badge/-Vite-0b0e1a?style=flat&logo=vite&logoColor=646CFF" alt="Vite" />
-      <img src="https://img.shields.io/badge/-CSS3-0b0e1a?style=flat&logo=css3&logoColor=1572B6" alt="CSS3" />
-    </td>
-  </tr>
-  <tr>
-    <td width="22%"><strong>Tools & Infrastructure</strong></td>
-    <td>
-      <img src="https://img.shields.io/badge/-Docker-0b0e1a?style=flat&logo=docker&logoColor=2496ED" alt="Docker" />
-      <img src="https://img.shields.io/badge/-Linux-0b0e1a?style=flat&logo=linux&logoColor=FCC624" alt="Linux" />
-      <img src="https://img.shields.io/badge/-WSL-0b0e1a?style=flat&logo=windows&logoColor=0078D6" alt="WSL" />
-      <img src="https://img.shields.io/badge/-Git-0b0e1a?style=flat&logo=git&logoColor=F05033" alt="Git" />
-      <img src="https://img.shields.io/badge/-GitHub-0b0e1a?style=flat&logo=github&logoColor=ffffff" alt="GitHub" />
-      <img src="https://img.shields.io/badge/-Nginx-0b0e1a?style=flat&logo=nginx&logoColor=009639" alt="Nginx" />
-      <img src="https://img.shields.io/badge/-Nodemon-0b0e1a?style=flat&logo=nodemon&logoColor=BBDEAD" alt="Nodemon" />
-    </td>
-  </tr>
-</table>
+<div align="left">
+  <p>
+    <strong>Languages</strong><br>
+    <img src="https://img.shields.io/badge/-JavaScript-0b0e1a?style=flat&logo=javascript&logoColor=F7DF1E" alt="JavaScript" />
+    <img src="https://img.shields.io/badge/-TypeScript-0b0e1a?style=flat&logo=typescript&logoColor=007ACC" alt="TypeScript" />
+    <img src="https://img.shields.io/badge/-C++-0b0e1a?style=flat&logo=cplusplus&logoColor=00599C" alt="C++" />
+    <img src="https://img.shields.io/badge/-C-0b0e1a?style=flat&logo=c&logoColor=A8B9CC" alt="C" />
+    <img src="https://img.shields.io/badge/-Java-0b0e1a?style=flat&logo=openjdk&logoColor=ED8B00" alt="Java" />
+  </p>
+
+  <p>
+    <strong>Backend & Databases</strong><br>
+    <img src="https://img.shields.io/badge/-Node.js-0b0e1a?style=flat&logo=node.js&logoColor=6DA55F" alt="Node.js" />
+    <img src="https://img.shields.io/badge/-Express-0b0e1a?style=flat&logo=express&logoColor=ffffff" alt="Express" />
+    <img src="https://img.shields.io/badge/-MongoDB-0b0e1a?style=flat&logo=mongodb&logoColor=4ea94b" alt="MongoDB" />
+    <img src="https://img.shields.io/badge/-PostgreSQL-0b0e1a?style=flat&logo=postgresql&logoColor=316192" alt="Postgres" />
+    <img src="https://img.shields.io/badge/-Redis-0b0e1a?style=flat&logo=redis&logoColor=DD0031" alt="Redis" />
+    <img src="https://img.shields.io/badge/-Prisma-0b0e1a?style=flat&logo=prisma&logoColor=3982CE" alt="Prisma" />
+  </p>
+
+  <p>
+    <strong>Frontend</strong><br>
+    <img src="https://img.shields.io/badge/-React-0b0e1a?style=flat&logo=react&logoColor=61DAFB" alt="React" />
+    <img src="https://img.shields.io/badge/-Next.js-0b0e1a?style=flat&logo=next.js&logoColor=ffffff" alt="Next.js" />
+    <img src="https://img.shields.io/badge/-Vue.js-0b0e1a?style=flat&logo=vuedotjs&logoColor=4FC08D" alt="Vue.js" />
+    <img src="https://img.shields.io/badge/-Redux-0b0e1a?style=flat&logo=redux&logoColor=593d88" alt="Redux" />
+    <img src="https://img.shields.io/badge/-TailwindCSS-0b0e1a?style=flat&logo=tailwind-css&logoColor=38B2AC" alt="TailwindCSS" />
+    <img src="https://img.shields.io/badge/-Vite-0b0e1a?style=flat&logo=vite&logoColor=646CFF" alt="Vite" />
+    <img src="https://img.shields.io/badge/-CSS3-0b0e1a?style=flat&logo=css3&logoColor=1572B6" alt="CSS3" />
+  </p>
+
+  <p>
+    <strong>Tools & Infrastructure</strong><br>
+    <img src="https://img.shields.io/badge/-Docker-0b0e1a?style=flat&logo=docker&logoColor=2496ED" alt="Docker" />
+    <img src="https://img.shields.io/badge/-Linux-0b0e1a?style=flat&logo=linux&logoColor=FCC624" alt="Linux" />
+    <img src="https://img.shields.io/badge/-WSL-0b0e1a?style=flat&logo=windows&logoColor=0078D6" alt="WSL" />
+    <img src="https://img.shields.io/badge/-Git-0b0e1a?style=flat&logo=git&logoColor=F05033" alt="Git" />
+    <img src="https://img.shields.io/badge/-GitHub-0b0e1a?style=flat&logo=github&logoColor=ffffff" alt="GitHub" />
+    <img src="https://img.shields.io/badge/-Nginx-0b0e1a?style=flat&logo=nginx&logoColor=009639" alt="Nginx" />
+    <img src="https://img.shields.io/badge/-Nodemon-0b0e1a?style=flat&logo=nodemon&logoColor=BBDEAD" alt="Nodemon" />
+  </p>
+</div>
 
 <hr>
 
