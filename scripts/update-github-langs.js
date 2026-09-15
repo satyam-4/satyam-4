@@ -93,7 +93,7 @@ function generateSvg(langTotals, outputPath = "languages_stats.svg") {
     return (
       `<tspan x="${x}" fill="${item.color}">● </tspan>` +
       `<tspan fill="#d8d9f0">${item.lang} </tspan>` +
-      `<tspan fill="#565a7a">${item.percent}%</tspan>`
+      `<tspan fill="#797da0">${item.percent}%</tspan>`
     );
   });
 
