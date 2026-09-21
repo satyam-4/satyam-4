@@ -7,17 +7,17 @@
 </div>
 
 <div align="center">
+  <a href="https://satyam-mishra-omega.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/Portfolio-333333??style=flat&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjMuNSA3LjUgMjUuMCAxNy4wIj48cGF0aCBmaWxsPSIjZjJhOTNjIiBkPSJNNyA5aDh2MmgtOHptLTIgMmgydjJoLTJ6bTAgMmgydjJoLTJ6bTIgMmg2djJoLTZ6bTYgMmgydjJoLTJ6bTAgMmgydjJoLTJ6bS04IDJoOHYyaC04em0xMiAtMTJoMnYyaC0yem04IDBoMnYyaC0yem0tOCAyaDR2MmgtNHptNiAwaDR2MmgtNHptLTYgMmgydjJoLTJ6bTQgMGgydjJoLTJ6bTQgMGgydjJoLTJ6bS04IDJoMnYyaC0yem04IDBoMnYyaC0yem0tOCAyaDJ2MmgtMnptOCAwaDJ2MmgtMnptLTggMmgydjJoLTJ6bTggMGgydjJoLTJ6bS04IDJoMnYyaC0yem04IDBoMnYyaC0yeiIvPjwvc3ZnPg==&labelColor=333333?" height="28" alt="portfolio" />
+  </a>
   <a href="https://www.linkedin.com/in/satyam-mishra-9a4302336/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white&labelColor=0077B5" height="28" alt="linkedin" />
   </a>
-  <a href="https://satyam-mishra-omega.vercel.app/" target="_blank">
-    <img src="https://img.shields.io/badge/Portfolio-F59E0B?style=flat&logo=vercel&logoColor=white&labelColor=F59E0B" height="28" alt="portfolio" />
+  <a href="mailto:prosatyam2003@gmail.com" target="_blank">
+    <img src="https://img.shields.io/badge/Gmail-D14836?style=flat&logo=gmail&logoColor=white&labelColor=D14836" height="28" alt="gmail" />
   </a>
   <a href="https://leetcode.com/u/satyam-4/" target="_blank">
     <img src="https://img.shields.io/badge/LeetCode-E08700?style=flat&logo=leetcode&logoColor=white&labelColor=E08700" height="28" alt="leetcode" />
-  </a>
-  <a href="https://discord.com/users/satyam_mishra0710" target="_blank">
-    <img src="https://img.shields.io/badge/Discord-5865F2?style=flat&logo=discord&logoColor=white&labelColor=5865F2" height="28" alt="discord" />
   </a>
 </div>
 
