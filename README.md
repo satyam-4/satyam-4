@@ -10,8 +10,8 @@
   <a href="https://www.linkedin.com/in/satyam-mishra-9a4302336/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white&labelColor=0077B5" height="28" alt="linkedin" />
   </a>
-  <a href="mailto:prosatyam2003@gmail.com" target="_blank">
-    <img src="https://img.shields.io/badge/Gmail-D14836?style=flat&logo=gmail&logoColor=white&labelColor=D14836" height="28" alt="gmail" />
+  <a href="https://satyam-mishra-omega.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/Portfolio-F59E0B?style=flat&logo=vercel&logoColor=white&labelColor=F59E0B" height="28" alt="portfolio" />
   </a>
   <a href="https://leetcode.com/u/satyam-4/" target="_blank">
     <img src="https://img.shields.io/badge/LeetCode-E08700?style=flat&logo=leetcode&logoColor=white&labelColor=E08700" height="28" alt="leetcode" />
