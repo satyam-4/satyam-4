@@ -1,4 +1,4 @@
-name: Update LeetCode Stats
+name: Update Profile Stats
 
 on:
   schedule:
