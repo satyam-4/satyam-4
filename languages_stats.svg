@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="985" height="140" font-family="ConsolasFallback,Cascadia Code,Fira Code,ui-monospace,DejaVu Sans Mono,Liberation Mono,Consolas,Menlo,monospace" font-size="14px">
-<rect width="985" height="140" fill="#0b0e1a" rx="15"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 140" width="100%" height="100%" font-family="ConsolasFallback,Cascadia Code,Fira Code,ui-monospace,DejaVu Sans Mono,Liberation Mono,Consolas,Menlo,monospace" font-size="16px">
+<rect width="700" height="140" fill="#0b0e1a" rx="15"/>
 <text x="25" y="30" fill="#d8d9f0" font-size="14px">top-languages<tspan fill="#565a7a">@</tspan><tspan fill="#f72585">satyam-4</tspan><tspan fill="#23263a"> ────────────────────────────────────────────────────────────────────</tspan></text>
-<rect x="25" y="50" width="662.9150000000001" height="12" fill="#f7df1e" rx='6'/>
-<rect x="687.9150000000001" y="50" width="126.22500000000001" height="12" fill="#3178c6" />
-<rect x="814.1400000000001" y="50" width="67.32000000000001" height="12" fill="#1572B6" />
-<rect x="881.4600000000002" y="50" width="60.775" height="12" fill="#e34c26" />
-<rect x="942.2350000000001" y="50" width="14.96" height="12" fill="#ED8B00" />
-<text y="98" font-size="13px"><tspan x="25" fill="#f7df1e">● </tspan><tspan fill="#d8d9f0">JavaScript </tspan><tspan fill="#b6b8c9">70.9%</tspan><tspan x="212" fill="#3178c6">● </tspan><tspan fill="#d8d9f0">TypeScript </tspan><tspan fill="#b6b8c9">13.5%</tspan><tspan x="399" fill="#1572B6">● </tspan><tspan fill="#d8d9f0">CSS </tspan><tspan fill="#b6b8c9">7.2%</tspan><tspan x="586" fill="#e34c26">● </tspan><tspan fill="#d8d9f0">HTML </tspan><tspan fill="#b6b8c9">6.5%</tspan><tspan x="773" fill="#ED8B00">● </tspan><tspan fill="#d8d9f0">Java </tspan><tspan fill="#b6b8c9">1.6%</tspan></text>
+<rect x="25" y="50" width="460.85" height="12" fill="#f7df1e" rx='6'/>
+<rect x="485.85" y="50" width="87.75" height="12" fill="#3178c6" />
+<rect x="573.6" y="50" width="46.800000000000004" height="12" fill="#1572B6" />
+<rect x="620.4" y="50" width="42.25" height="12" fill="#e34c26" />
+<rect x="662.65" y="50" width="10.4" height="12" fill="#ED8B00" />
+<text y="98" font-size="15px"><tspan x="25" fill="#f7df1e">● </tspan><tspan fill="#d8d9f0">JavaScript </tspan><tspan fill="#b6b8c9">70.9%</tspan><tspan x="155" fill="#3178c6">● </tspan><tspan fill="#d8d9f0">TypeScript </tspan><tspan fill="#b6b8c9">13.5%</tspan><tspan x="285" fill="#1572B6">● </tspan><tspan fill="#d8d9f0">CSS </tspan><tspan fill="#b6b8c9">7.2%</tspan><tspan x="415" fill="#e34c26">● </tspan><tspan fill="#d8d9f0">HTML </tspan><tspan fill="#b6b8c9">6.5%</tspan><tspan x="545" fill="#ED8B00">● </tspan><tspan fill="#d8d9f0">Java </tspan><tspan fill="#b6b8c9">1.6%</tspan></text>
 </svg>
