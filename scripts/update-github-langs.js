@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 const USERNAME = "satyam-4";
-const WIDTH = 700;
+const WIDTH = 985;
 const HEIGHT = 140;
 const COL_X = 25;
 
@@ -63,7 +63,7 @@ function generateSvg(langTotals, outputPath = "languages_stats.svg") {
     .slice(0, 5);
 
   const svg = [];
-  svg.push(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${WIDTH} ${HEIGHT}" width="100%" height="100%" font-family="${FONT_FAMILY}" font-size="16px">`);
+  svg.push(`<svg xmlns="http://www.w3.org/2000/svg" width="${WIDTH}" height="${HEIGHT}" font-family="${FONT_FAMILY}" font-size="14px">`);
   svg.push(`<rect width="${WIDTH}" height="${HEIGHT}" fill="#0b0e1a" rx="15"/>`);
 
   const dashes = "\u2500".repeat(68);
@@ -97,7 +97,7 @@ function generateSvg(langTotals, outputPath = "languages_stats.svg") {
     );
   });
 
-  svg.push(`<text y="${legendY}" font-size="15px">${legendSpans.join("")}</text>`);
+  svg.push(`<text y="${legendY}" font-size="13px">${legendSpans.join("")}</text>`);
   svg.push("</svg>");
 
   fs.writeFileSync(outputPath, svg.join("\n"), "utf8");
