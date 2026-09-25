@@ -5,11 +5,11 @@ const API_URL = `https://leetcode-api-faisalshohag.vercel.app/${LEETCODE_USERNAM
 const README_PATH = "README.md";
 const SVG_PATH = "leetcode_stats.svg";
 
-const WIDTH = 700;
-const LINE_HEIGHT = 26;
+const WIDTH = 985;
+const LINE_HEIGHT = 22;
 const COL_X = 25;
 const RECENT_COUNT = 8;
-const MAX_TITLE_LEN = 42;
+const MAX_TITLE_LEN = 68;
 
 const DIFF_COLORS = {
   solved: "#4cc9f0",
@@ -89,7 +89,7 @@ function generateLeetCodeSvg(data, outputPath = SVG_PATH) {
 
   const svg = [];
   svg.push(
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${WIDTH} ${height}" width="100%" height="100%" font-family="${FONT_FAMILY}" font-size="16px">`
+    `<svg xmlns="http://www.w3.org/2000/svg" width="${WIDTH}" height="${height}" font-family="${FONT_FAMILY}" font-size="14px">`
   );
   svg.push("<style>");
   svg.push("@font-face {");
@@ -131,7 +131,7 @@ function generateLeetCodeSvg(data, outputPath = SVG_PATH) {
     );
   }
 
-  svg.push(`<text y="${stats_y}" font-size="17px">${statSpans.join("")}</text>`);
+  svg.push(`<text y="${stats_y}" font-size="15px">${statSpans.join("")}</text>`);
   svg.push("");
 
   const subDashes = "\u2500".repeat(68);
