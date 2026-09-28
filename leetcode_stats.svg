@@ -11,7 +11,7 @@ text, tspan { white-space: pre; }
 
 <text x="25" y="30" fill="#d8d9f0" font-size="14px">leetcode-stats<tspan fill="#565a7a">@</tspan><tspan fill="#f72585">satyam-4</tspan><tspan fill="#23263a"> ────────────────────────────────────────────────────────────────────</tspan></text>
 
-<text y="58" font-size="15px"><tspan x="25" fill="#4cc9f0">Solved: 14</tspan><tspan x="258" fill="#3fb950">Easy: 8</tspan><tspan x="491" fill="#ffb703">Medium: 6</tspan><tspan x="724" fill="#f85149">Hard: 0</tspan></text>
+<text y="58" font-size="15px"><tspan x="25" fill="#4cc9f0">Solved: 15</tspan><tspan x="258" fill="#3fb950">Easy: 8</tspan><tspan x="491" fill="#ffb703">Medium: 7</tspan><tspan x="724" fill="#f85149">Hard: 0</tspan></text>
 
 <text x="25" y="78"><tspan fill="#565a7a">- </tspan><tspan fill="#d8d9f0">Recent Submissions</tspan><tspan fill="#23263a"> ────────────────────────────────────────────────────────────────────</tspan></text>
 
