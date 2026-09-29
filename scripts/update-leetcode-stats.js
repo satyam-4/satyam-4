@@ -73,7 +73,7 @@ function generateLeetCodeSvg(data, outputPath = SVG_PATH) {
     }
     seen.add(slug);
     rows.push({
-      title: sub.title || slug,
+      title: (sub.title || slug).trim(),
       lang: sub.lang || "",
     });
     if (rows.length === RECENT_COUNT) {
