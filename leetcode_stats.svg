@@ -15,12 +15,12 @@ text, tspan { white-space: pre; }
 
 <text x="25" y="78"><tspan fill="#565a7a">- </tspan><tspan fill="#d8d9f0">Recent Submissions</tspan><tspan fill="#23263a"> ────────────────────────────────────────────────────────────────────</tspan></text>
 
-<text y="106"><tspan x="25" fill="#3d4159"> 1.</tspan><tspan x="60" fill="#7dd3fc">Valid Parenthesis String</tspan><tspan x="845" fill="#9d4edd">java</tspan></text>
-<text y="128"><tspan x="25" fill="#3d4159"> 2.</tspan><tspan x="60" fill="#7dd3fc">Longest Valid Parentheses</tspan><tspan x="845" fill="#9d4edd">java</tspan></text>
-<text y="150"><tspan x="25" fill="#3d4159"> 3.</tspan><tspan x="60" fill="#7dd3fc">Generate Parentheses</tspan><tspan x="845" fill="#9d4edd">java</tspan></text>
-<text y="172"><tspan x="25" fill="#3d4159"> 4.</tspan><tspan x="60" fill="#7dd3fc">Valid Parentheses</tspan><tspan x="845" fill="#9d4edd">java</tspan></text>
-<text y="194"><tspan x="25" fill="#3d4159"> 5.</tspan><tspan x="60" fill="#7dd3fc">Memoize</tspan><tspan x="845" fill="#9d4edd">javascript</tspan></text>
-<text y="216"><tspan x="25" fill="#3d4159"> 6.</tspan><tspan x="60" fill="#7dd3fc">Cache With Time Limit</tspan><tspan x="845" fill="#9d4edd">javascript</tspan></text>
-<text y="238"><tspan x="25" fill="#3d4159"> 7.</tspan><tspan x="60" fill="#7dd3fc">Check if There Is a Valid Parentheses String Path</tspan><tspan x="845" fill="#9d4edd">java</tspan></text>
-<text y="260"><tspan x="25" fill="#3d4159"> 8.</tspan><tspan x="60" fill="#7dd3fc">Sleep</tspan><tspan x="845" fill="#9d4edd">javascript</tspan></text>
+<text y="106"><tspan x="25" fill="#3d4159"> 1.</tspan><tspan x="60" fill="#7dd3fc">Score of Parentheses</tspan><tspan x="845" fill="#9d4edd">java</tspan></text>
+<text y="128"><tspan x="25" fill="#3d4159"> 2.</tspan><tspan x="60" fill="#7dd3fc">Valid Parenthesis String</tspan><tspan x="845" fill="#9d4edd">java</tspan></text>
+<text y="150"><tspan x="25" fill="#3d4159"> 3.</tspan><tspan x="60" fill="#7dd3fc">Longest Valid Parentheses</tspan><tspan x="845" fill="#9d4edd">java</tspan></text>
+<text y="172"><tspan x="25" fill="#3d4159"> 4.</tspan><tspan x="60" fill="#7dd3fc">Generate Parentheses</tspan><tspan x="845" fill="#9d4edd">java</tspan></text>
+<text y="194"><tspan x="25" fill="#3d4159"> 5.</tspan><tspan x="60" fill="#7dd3fc">Valid Parentheses</tspan><tspan x="845" fill="#9d4edd">java</tspan></text>
+<text y="216"><tspan x="25" fill="#3d4159"> 6.</tspan><tspan x="60" fill="#7dd3fc">Memoize</tspan><tspan x="845" fill="#9d4edd">javascript</tspan></text>
+<text y="238"><tspan x="25" fill="#3d4159"> 7.</tspan><tspan x="60" fill="#7dd3fc">Cache With Time Limit</tspan><tspan x="845" fill="#9d4edd">javascript</tspan></text>
+<text y="260"><tspan x="25" fill="#3d4159"> 8.</tspan><tspan x="60" fill="#7dd3fc">Check if There Is a Valid Parentheses String Path</tspan><tspan x="845" fill="#9d4edd">java</tspan></text>
 </svg>
