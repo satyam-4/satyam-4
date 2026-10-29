@@ -47,7 +47,10 @@ async function fetchLanguageStats() {
   for (const repo of repos) {
     if (repo.fork || !repo.languages_url) continue;
     const lRes = await fetch(repo.languages_url, { headers });
-    if (!lRes.ok) continue;
+    if (!lRes.ok) {   
+      console.warn(`Skipping ${repo.full_name}: ${lRes.status}`);   
+      continue; 
+    }
 
     const languages = await lRes.json();
     for (const [lang, bytes] of Object.entries(languages)) {
