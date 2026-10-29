@@ -17,7 +17,7 @@ const LANG_COLORS = {
   Vue: "#4FC08D",
 };
 const DEFAULT_COLOR = "#4cc9f0";
-
+const EXCLUDE_REPOS = new Set(["purecar"].map((n) => n.toLowerCase())); 
 const FONT_FAMILY =
   "ConsolasFallback,Cascadia Code,Fira Code,ui-monospace,DejaVu Sans Mono,Liberation Mono,Consolas,Menlo,monospace";
 
@@ -45,7 +45,7 @@ async function fetchLanguageStats() {
 
   const langTotals = {};
   for (const repo of repos) {
-    if (repo.fork || !repo.languages_url) continue;
+    if (repo.fork || EXCLUDE_REPOS.has(repo.name.toLowerCase()) || !repo.languages_url) continue; 
     const lRes = await fetch(repo.languages_url, { headers });
     if (!lRes.ok) {   
       console.warn(`Skipping ${repo.full_name}: ${lRes.status}`);   
