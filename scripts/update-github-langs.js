@@ -23,17 +23,27 @@ const FONT_FAMILY =
 
 async function fetchLanguageStats() {
   const token = process.env.GITHUB_TOKEN;
+  if (!token) throw new Error("GITHUB_TOKEN is required to include private repos");
+
   const headers = {
     "User-Agent": "NodeJS-Script",
-    ...(token && { Authorization: `token ${token}` }),
+    Accept: "application/vnd.github+json",
+    Authorization: `Bearer ${token}`,
   };
 
-  const res = await fetch(`https://api.github.com/users/${USERNAME}/repos?per_page=100`, { headers });
-  if (!res.ok) throw new Error(`GitHub API Error: ${res.statusText}`);
+  const repos = [];
+  for (let page = 1; ; page++) {
+    const res = await fetch(
+      `https://api.github.com/user/repos?per_page=100&page=${page}&affiliation=owner&visibility=all`,
+      { headers }
+    );
+    if (!res.ok) throw new Error(`GitHub API Error: ${res.status} ${res.statusText}`);
+    const batch = await res.json();
+    repos.push(...batch);
+    if (batch.length < 100) break;
+  }
 
-  const repos = await res.json();
   const langTotals = {};
-
   for (const repo of repos) {
     if (repo.fork || !repo.languages_url) continue;
     const lRes = await fetch(repo.languages_url, { headers });
