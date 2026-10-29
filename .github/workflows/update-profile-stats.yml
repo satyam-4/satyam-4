@@ -27,7 +27,7 @@ jobs:
 
       - name: Generate GitHub Languages SVG
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.STATS_TOKEN  }}
         run: node scripts/update-github-langs.js
 
       - name: Commit and push changes if SVGs were updated
