@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="985" height="300" font-family="ConsolasFallback,Cascadia Code,Fira Code,ui-monospace,DejaVu Sans Mono,Liberation Mono,Consolas,Menlo,monospace" font-size="14px">
+<svg xmlns="http://www.w3.org/2000/svg" width="985" height="300" viewBox="0 0 985 300" font-family="ConsolasFallback,Cascadia Code,Fira Code,ui-monospace,DejaVu Sans Mono,Liberation Mono,Consolas,Menlo,monospace" font-size="14px">
 <style>
 @font-face {
   src: local('Cascadia Code'), local('Fira Code'), local('DejaVu Sans Mono'), local('Liberation Mono'), local('Consolas'), local('Menlo');
