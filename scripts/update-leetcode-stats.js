@@ -4,12 +4,16 @@ const LEETCODE_USERNAME = process.env.LEETCODE_USERNAME || "satyam-4";
 const API_URL = `https://leetcode-api-faisalshohag.vercel.app/${LEETCODE_USERNAME}`;
 const README_PATH = "README.md";
 const SVG_PATH = "leetcode_stats.svg";
+const SVG_PATH_MOBILE = "leetcode_stats_mobile.svg";
 
 const WIDTH = 985;
 const LINE_HEIGHT = 22;
 const COL_X = 25;
 const RECENT_COUNT = 8;
 const MAX_TITLE_LEN = 68;
+
+const M_WIDTH = 400;
+const CHAR_W = 8.5; 
 
 const DIFF_COLORS = {
   solved: "#4cc9f0",
@@ -89,7 +93,7 @@ function generateLeetCodeSvg(data, outputPath = SVG_PATH) {
 
   const svg = [];
   svg.push(
-    `<svg xmlns="http://www.w3.org/2000/svg" width="${WIDTH}" height="${height}" font-family="${FONT_FAMILY}" font-size="14px">`
+    `<svg xmlns="http://www.w3.org/2000/svg" width="${WIDTH}" height="${height}" viewBox="0 0 ${WIDTH} ${height}" font-family="${FONT_FAMILY}" font-size="14px">`
   );
   svg.push("<style>");
   svg.push("@font-face {");
@@ -165,31 +169,111 @@ function generateLeetCodeSvg(data, outputPath = SVG_PATH) {
 
   fs.writeFileSync(outputPath, svg.join("\n"), "utf8");
   console.log(`LeetCode SVG written to ${outputPath}`);
+
+  generateMobileSvg({ solved, easy, medium, hard, rows });
 }
 
-function bustReadmeImageCache(readmePath = README_PATH, svgPath = SVG_PATH) {
+function generateMobileSvg({ solved, easy, medium, hard, rows }, outputPath = SVG_PATH_MOBILE) {
+  const rightX = M_WIDTH - COL_X;
+  const innerChars = Math.floor((M_WIDTH - 2 * COL_X) / CHAR_W);
+  const stats1_y = 60;
+  const stats2_y = 84;
+  const divider_y = 112;
+  const first_row_y = 140;
+  const height = first_row_y + Math.max(rows.length, 1) * LINE_HEIGHT + 18;
+
+  const svg = [];
+  svg.push(
+    `<svg xmlns="http://www.w3.org/2000/svg" width="${M_WIDTH}" height="${height}" viewBox="0 0 ${M_WIDTH} ${height}" font-family="${FONT_FAMILY}" font-size="14px">`
+  );
+  svg.push("<style>");
+  svg.push("@font-face {");
+  svg.push(`  src: ${FONT_FACE_SRC};`);
+  svg.push("  font-family: 'ConsolasFallback';");
+  svg.push("  font-display: swap;");
+  svg.push("}");
+  svg.push("text, tspan { white-space: pre; }");
+  svg.push("</style>");
+  svg.push(`<rect width="${M_WIDTH}" height="${height}" fill="#0b0e1a" rx="15"/>`);
+
+  const label = `leetcode-stats@${LEETCODE_USERNAME}`;
+  const dashes = "\u2500".repeat(Math.max(3, innerChars - label.length - 1));
+  svg.push(
+    `<text x="${COL_X}" y="30" fill="#d8d9f0">` +
+      `leetcode-stats<tspan fill="#565a7a">@</tspan>` +
+      `<tspan fill="#f72585">${esc(LEETCODE_USERNAME)}</tspan>` +
+      `<tspan fill="#23263a"> ${dashes}</tspan></text>`
+  );
+
+  // 2x2 stats grid instead of one wide row
+  const colB = COL_X + Math.floor((M_WIDTH - 2 * COL_X) / 2);
+  const cell = (x, y, label, value, color) =>
+    `<text x="${x}" y="${y}" font-size="15px" fill="${color}">${esc(label)}: ${value}</text>`;
+  svg.push(cell(COL_X, stats1_y, "Solved", solved, DIFF_COLORS.solved));
+  svg.push(cell(colB, stats1_y, "Easy", easy, DIFF_COLORS.easy));
+  svg.push(cell(COL_X, stats2_y, "Medium", medium, DIFF_COLORS.medium));
+  svg.push(cell(colB, stats2_y, "Hard", hard, DIFF_COLORS.hard));
+
+  const subLabel = "- Recent Submissions";
+  const subDashes = "\u2500".repeat(Math.max(3, innerChars - subLabel.length - 1));
+  svg.push(
+    `<text x="${COL_X}" y="${divider_y}">` +
+      `<tspan fill="#565a7a">- </tspan><tspan fill="#d8d9f0">Recent Submissions</tspan>` +
+      `<tspan fill="#23263a"> ${subDashes}</tspan></text>`
+  );
+
+  if (rows.length > 0) {
+    rows.forEach((row, i) => {
+      const y = first_row_y + i * LINE_HEIGHT;
+      const num = String(i + 1).padStart(2, " ") + ".";
+      const titleX = COL_X + 30;
+      // leave room for the language label on the right
+      const maxChars = Math.max(
+        8,
+        Math.floor((rightX - titleX - row.lang.length * CHAR_W - 12) / CHAR_W)
+      );
+      svg.push(
+        `<text y="${y}">` +
+          `<tspan x="${COL_X}" fill="#3d4159">${num}</tspan>` +
+          `<tspan x="${titleX}" fill="#7dd3fc">${esc(truncate(row.title, maxChars))}</tspan>` +
+          `<tspan x="${rightX}" text-anchor="end" fill="#9d4edd">${esc(row.lang)}</tspan>` +
+          `</text>`
+      );
+    });
+  } else {
+    svg.push(
+      `<text x="${COL_X}" y="${first_row_y}" fill="#565a7a">No recent submissions found.</text>`
+    );
+  }
+
+  svg.push("</svg>");
+  fs.writeFileSync(outputPath, svg.join("\n"), "utf8");
+  console.log(`LeetCode mobile SVG written to ${outputPath}`);
+}
+
+function bustReadmeImageCache(readmePath = README_PATH, svgPaths = [SVG_PATH, SVG_PATH_MOBILE]) {
   if (!fs.existsSync(readmePath)) {
     console.log(`${readmePath} not found, skipping cache-bust step.`);
     return;
   }
 
-  const readme = fs.readFileSync(readmePath, "utf8");
+  let readme = fs.readFileSync(readmePath, "utf8");
+  const original = readme;
   const cacheBuster = Date.now();
 
-  const pattern = new RegExp(
-    `(src=")\\.\\/${svgPath.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(?:\\?[^"]*)?(")`,
-    "g"
-  );
-
-  const updated = readme.replace(pattern, `$1./${svgPath}?v=${cacheBuster}$2`);
-
-  if (updated !== readme) {
-    fs.writeFileSync(readmePath, updated, "utf8");
-    console.log(`README.md image reference cache-busted (v=${cacheBuster}).`);
-  } else {
-    console.log(
-      `No matching "./${svgPath}" <img> src found in ${readmePath} — nothing to cache-bust.`
+  for (const svgPath of svgPaths) {
+    const pattern = new RegExp(
+      `((?:src|srcset)=")\\.\\/${svgPath.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(?:\\?[^"]*)?(")`,
+      "g"
     );
+    readme = readme.replace(pattern, `$1./${svgPath}?v=${cacheBuster}$2`);
+  }
+
+  if (readme !== original) {
+    fs.writeFileSync(readmePath, readme, "utf8");
+    console.log(`README.md image references cache-busted (v=${cacheBuster}).`);
+  } else {
+    console.log(`No matching SVG references found in ${readmePath} — nothing to cache-bust.`);
   }
 }
 
