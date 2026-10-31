@@ -83,11 +83,10 @@
 
 <br>
 
-<p align="center">
-  <a href="https://leetcode.com/u/satyam-4/" target="_blank">
-    <img src="./leetcode_stats.svg" alt="LeetCode Stats" width="100%" />
-  </a>
-</p>
+<picture>
+  <source media="(max-width: 600px)" srcset="./leetcode_stats_mobile.svg">
+  <img src="./leetcode_stats.svg" alt="LeetCode Stats" width="100%" />
+</picture>
 
 <hr>
 
@@ -96,9 +95,10 @@
 </h3>
 > <code>Calculated dynamically from byte counts across all repositories.</code>
 
-<p align="center">
+<picture>
+  <source media="(max-width: 600px)" srcset="./languages_stats_mobile.svg">
   <img src="./languages_stats.svg" alt="Top Languages" width="100%" />
-</p>
+</picture>
 
 <div align="right">
   <img src="https://img.shields.io/github/last-commit/satyam-4/satyam-4?style=flat&color=0b0e1a&label=Last%20Updated&labelColor=23263a&logo=github&logoColor=d8d9f0" alt="Last Updated">
