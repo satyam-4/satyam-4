@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="985" height="140" font-family="ConsolasFallback,Cascadia Code,Fira Code,ui-monospace,DejaVu Sans Mono,Liberation Mono,Consolas,Menlo,monospace" font-size="14px">
 <rect width="985" height="140" fill="#0b0e1a" rx="15"/>
 <text x="25" y="30" fill="#d8d9f0" font-size="14px">top-languages<tspan fill="#565a7a">@</tspan><tspan fill="#f72585">satyam-4</tspan><tspan fill="#23263a"> ────────────────────────────────────────────────────────────────────</tspan></text>
-<rect x="25" y="50" width="667.59" height="12" fill="#3178c6" rx='6'/>
-<rect x="692.59" y="50" width="200.09" height="12" fill="#f7df1e" />
-<rect x="892.6800000000001" y="50" width="43.945" height="12" fill="#1572B6" />
-<rect x="936.6250000000001" y="50" width="12.155000000000001" height="12" fill="#e34c26" />
-<rect x="948.7800000000001" y="50" width="7.48" height="12" fill="#3776AB" />
-<text y="98" font-size="13px"><tspan x="25" fill="#3178c6">● </tspan><tspan fill="#d8d9f0">TypeScript </tspan><tspan fill="#b6b8c9">71.4%</tspan><tspan x="212" fill="#f7df1e">● </tspan><tspan fill="#d8d9f0">JavaScript </tspan><tspan fill="#b6b8c9">21.4%</tspan><tspan x="399" fill="#1572B6">● </tspan><tspan fill="#d8d9f0">CSS </tspan><tspan fill="#b6b8c9">4.7%</tspan><tspan x="586" fill="#e34c26">● </tspan><tspan fill="#d8d9f0">HTML </tspan><tspan fill="#b6b8c9">1.3%</tspan><tspan x="773" fill="#3776AB">● </tspan><tspan fill="#d8d9f0">Python </tspan><tspan fill="#b6b8c9">0.8%</tspan></text>
+<rect x="25" y="50" width="670.3950000000001" height="12" fill="#3178c6" rx='6'/>
+<rect x="695.3950000000001" y="50" width="197.28500000000003" height="12" fill="#f7df1e" />
+<rect x="892.6800000000001" y="50" width="43.01" height="12" fill="#1572B6" />
+<rect x="935.69" y="50" width="12.155000000000001" height="12" fill="#e34c26" />
+<rect x="947.845" y="50" width="7.48" height="12" fill="#3776AB" />
+<text y="98" font-size="13px"><tspan x="25" fill="#3178c6">● </tspan><tspan fill="#d8d9f0">TypeScript </tspan><tspan fill="#b6b8c9">71.7%</tspan><tspan x="212" fill="#f7df1e">● </tspan><tspan fill="#d8d9f0">JavaScript </tspan><tspan fill="#b6b8c9">21.1%</tspan><tspan x="399" fill="#1572B6">● </tspan><tspan fill="#d8d9f0">CSS </tspan><tspan fill="#b6b8c9">4.6%</tspan><tspan x="586" fill="#e34c26">● </tspan><tspan fill="#d8d9f0">HTML </tspan><tspan fill="#b6b8c9">1.3%</tspan><tspan x="773" fill="#3776AB">● </tspan><tspan fill="#d8d9f0">Python </tspan><tspan fill="#b6b8c9">0.8%</tspan></text>
 </svg>
