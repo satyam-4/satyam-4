@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="154" viewBox="0 0 400 154" font-family="ConsolasFallback,Cascadia Code,Fira Code,ui-monospace,DejaVu Sans Mono,Liberation Mono,Consolas,Menlo,monospace" font-size="14px">
+<rect width="400" height="154" fill="#0b0e1a" rx="15"/>
+<text x="25" y="30" fill="#d8d9f0">top-languages<tspan fill="#565a7a">@</tspan><tspan fill="#f72585">satyam-4</tspan><tspan fill="#23263a"> ──────────────────</tspan></text>
+<rect x="25" y="50" width="250.6" height="12" fill="#3178c6" rx='6'/>
+<rect x="275.6" y="50" width="74.2" height="12" fill="#f7df1e" />
+<rect x="349.8" y="50" width="16.1" height="12" fill="#1572B6" />
+<rect x="365.90000000000003" y="50" width="4.550000000000001" height="12" fill="#e34c26" />
+<rect x="370.45000000000005" y="50" width="2.8000000000000003" height="12" fill="#3776AB" />
+<text y="92"><tspan x="25" fill="#3178c6">● </tspan><tspan fill="#d8d9f0">TypeScript </tspan><tspan fill="#b6b8c9">71.6%</tspan></text>
+<text y="92"><tspan x="200" fill="#f7df1e">● </tspan><tspan fill="#d8d9f0">JavaScript </tspan><tspan fill="#b6b8c9">21.2%</tspan></text>
+<text y="114"><tspan x="25" fill="#1572B6">● </tspan><tspan fill="#d8d9f0">CSS </tspan><tspan fill="#b6b8c9">4.6%</tspan></text>
+<text y="114"><tspan x="200" fill="#e34c26">● </tspan><tspan fill="#d8d9f0">HTML </tspan><tspan fill="#b6b8c9">1.3%</tspan></text>
+<text y="136"><tspan x="25" fill="#3776AB">● </tspan><tspan fill="#d8d9f0">Python </tspan><tspan fill="#b6b8c9">0.8%</tspan></text>
+</svg>
